@@ -1,0 +1,118 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 30px;
+  width: 61%;
+
+  @include respond-to(phoneAndTablet) {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  & > nav {
+    width: 435px;
+  }
+
+  & > img {
+    @include size(156px, 39px);
+
+    @include respond-to(phoneAndTablet) {
+      margin-top: 35px;
+      order: 2;
+    }
+
+    @media screen and (max-width: 364px){
+      @include size(100%, auto);
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  padding-left: 0;
+
+  & li {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    & a {
+      padding: 3px 14px;
+      display: block;
+      transition: all 0.2s ease-in-out 0s;
+      text-transform: uppercase;
+      @include text(#000000, rem(14), 700);
+
+      font-family: Roboto, sans-serif;
+      line-height: 35px;
+      letter-spacing: 1.12px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.menu li a:hover, .menu li:hover>a .menu ul li a:hover, .menu ul li:hover>a {
+  color: #fff;
+  background: black;
+}
+
+.responsive-menu {
+  display: none;
+  width: 100%;
+  padding: 20px 15px;
+  background: #367ab7;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .menu li a {
+    font-size: rem(12);
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    & li {
+      display: block;
+      margin: 0;
+
+      & a {
+        background: #fff;
+        color: #797979;
+      }
+    }
+  }
+
+  .responsive-menu {
+    display: block;
+  }
+
+  nav {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    width: 50%;
+  }
+
+  .menu li a:hover,.menu li:hover>a {
+    background: black;
+    color: #fff;
+  }
+}

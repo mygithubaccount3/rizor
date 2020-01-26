@@ -1,0 +1,106 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.footer {
+  border-top: 3px solid #cccccc;
+  padding-top: 43px;
+  padding-bottom: 52px;
+
+  @include respond-to(phoneAndTablet) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: auto auto 46px;
+    padding-left: 0;
+    @include size(38%);
+
+    @include respond-to(phoneAndTablet) {
+      margin-bottom: 10px;
+      @include size(100%);
+    }
+
+    & > li {
+      & > a {
+        padding-left: 3px;
+        padding-right: 3px;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out 0s;
+        @include text(#999999, rem(16), 700);
+
+        &:hover {
+          color: #fff;
+          background: #367ab7;
+        }
+      }
+    }
+  }
+
+  &__separator {
+    display: flex;
+    justify-content: space-between;
+    margin: auto auto 42px;
+    @include size(10%);
+
+    @include respond-to(phoneAndTablet) {
+      margin-bottom: 10px;
+      @include size(20%);
+    }
+
+    & > div {
+      @include size(13px, 13px);
+      background-color: #eeeeee;
+    }
+  }
+
+    & > a {
+      display: block;
+      line-height: 27px;
+      letter-spacing: 0.7px;
+      margin: auto;
+      text-align: center;
+      @include text(#aaaaaa, rem(14), 400);
+
+      &:first-of-type {
+        margin-bottom: 7px;
+        width: 320px;
+
+        @media screen and (max-width: 350px) {
+          width: 100%;
+        }
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 2px;
+        width: 100px;
+      }
+
+      &:last-of-type {
+        line-height: 33.75px;
+        letter-spacing: 0.9px;
+        width: 240px;
+        @include text(#e1aa6e, rem(16), 700);
+      }
+    }
+
+  &__copyright {
+    opacity: 0.6;
+    letter-spacing: 0.5px;
+    margin: auto;
+    text-align: center;
+    @include size(79%);
+    @include text(#aaaaaa, rem(12), 400);
+
+    &::before {
+      border: 1px solid #eeeeee;
+      content: "";
+      display: block;
+      margin-top: 42px;
+      margin-bottom: 30px;
+    }
+  }
+}

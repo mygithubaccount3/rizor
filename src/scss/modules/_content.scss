@@ -1,0 +1,156 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &__nav {
+    list-style-type: none;
+    position: absolute;
+    right: 90px;
+    z-index: 99;
+
+
+    &::before, &::after {
+      content: "";
+      display: block;
+      position: relative;
+      left: 8px;
+      background-color: #3a30f8;
+    }
+
+    &::before {
+      bottom: 17px;
+      @include size(2px, 328px);
+    }
+
+    &::after {
+      top: 17px;
+      @include size(2px, 360px);
+    }
+
+    &-item {
+      &::before, &--selected::before {
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+      }
+
+      &::before {
+        background-color: #3a30f8;
+        @include size(8px, 8px);
+      }
+
+      &--selected::before {
+        background-color: white;
+        border: 2px solid #3a30f8;
+        @include size(14px, 14px);
+      }
+    }
+  }
+
+  &__text-wrapper {
+    position: absolute;
+    z-index: 99;
+    width: 35%;
+    left: 19.2%;
+    top: 16.3%;
+
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("/assets/img/arrow.png");
+      margin-top: 34px;
+      margin-left: 37px;
+      @include size(11px, 95px);
+    }
+  }
+
+  &__title {
+    font-family: "Rubik Mono One", sans-serif;
+    letter-spacing: 6.4px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    @include text(#000000, rem(80), 400);
+
+    & > span {
+      letter-spacing: -12px;
+    }
+  }
+
+  &__description {
+    font-family: Roboto, sans-serif;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    @include text(#000000, rem(20), 700);
+    width: 50%;
+    margin-left: 5px;
+  }
+
+  & > img {
+    position: relative;
+    top: -20px;
+    @include size(26.5%, auto);
+  }
+
+  &__video {
+    margin: 0;
+    margin-top: 13px;
+    position: relative;
+    width: 56%;
+
+    & > video {
+      @include size(100%, 100%)
+    }
+  }
+}
+
+/*.controls[data-state=hidden] {
+  display:none;
+}
+
+.controls[data-state=visible] {
+  display:block;
+}*/
+
+button {
+  border:none;
+  cursor:pointer;
+  background:transparent;
+  background-size:contain;
+  background-repeat:no-repeat;
+  transform: rotate(-90deg);
+  top: 61px;
+  left: -65px;
+  position:absolute;
+  @include size(90px, 105px);
+
+  & > span {
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    position: relative;
+    top: 4px;
+    left: 7px;
+    @include text(#000000, rem(12), 700);
+  }
+
+  & > img {
+    transform: rotate(90deg);
+  }
+}
+
+/*.controls button:hover, .controls button:focus {
+  opacity:0.5;
+}*/
+
+/*.controls button[data-state="play"] {
+  background-image: url('/assets/img/play.svg');
+}
+
+.controls button[data-state="pause"] {
+  background-image: url('../img/play.svg');
+}*/
