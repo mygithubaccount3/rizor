@@ -1,0 +1,95 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.content__rizor-colors {
+  position: relative;
+  top: 22%;
+  left: 15.2%;
+  width: 15%;
+  @media screen and (min-width: 1025px) and (max-width: 1919px) {
+    top: 8.4%;
+    width: 23%;
+  }
+
+  @include respond-to(phoneAndTablet) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 47%;
+  }
+
+  @include respond-to(tablet) {
+    border-right: 1px solid lightgray;
+  }
+
+  @include respond-to(smallScreen) {
+    top: 40px;
+    width: 100%;
+  }
+
+  & > h2 {
+    font-family: "Rubik Mono One", sans-serif;
+    letter-spacing: 3.2px;
+    margin-bottom: 22px;
+    @include text(#000000, rem(40), 400);
+    @include respond-to(smallScreen) {
+      margin-top: 0;
+    }
+    @include respond-to(tablet) {
+      margin-top: 33.2px;
+    }
+  }
+
+  & > p, & > ul > li {
+    font-family: Roboto, sans-serif;
+    line-height: 30px;
+    margin-bottom: -1px;
+    @include text(#000000, rem(18), 300);
+  }
+
+  & > ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 54px;
+    width: 94%;
+    margin-left: 21px;
+    @media screen and (min-width: 1025px) and (max-width: 1919px) {
+      margin-top: 10px;
+      margin-left: 0;
+      width: 94%;
+    }
+    @include respond-to(phoneAndTablet) {
+      margin-left: 0;
+    }
+
+    & > li {
+      display: inline-block;
+      border: 3px solid #ffffff;
+      border-radius: 50%;
+      background-color: #e2e837;
+      @include size(26px, 26px);
+
+      &:hover {
+        animation: move 1s linear 0s infinite alternate;
+      }
+
+      &:nth-child(2) {
+        background-color: #00b6f1;
+      }
+
+      &:nth-child(3) {
+        background-color: #e23232;
+      }
+
+      &:nth-child(4) {
+        background-color: #f0efef;
+      }
+
+      &:nth-child(5) {
+        background-color: #0c0c0c;
+      }
+    }
+  }
+}

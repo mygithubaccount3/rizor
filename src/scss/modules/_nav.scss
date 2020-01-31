@@ -1,0 +1,52 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.content__nav {
+  list-style-type: none;
+  position: absolute;
+  right: 90px;
+  z-index: 99;
+  @include respond-to(tablet) {
+    right: 30px;
+  }
+
+  @include respond-to(smallScreen) {
+    display: none;
+  }
+
+  &::before, &::after {
+    content: "";
+    display: block;
+    position: relative;
+    left: 8px;
+    background-color: #3a30f8;
+    @include size(2px, 15vw);
+  }
+
+  &::before {
+    bottom: 17px;
+  }
+
+  &::after {
+    top: 17px;
+  }
+
+  &-item {
+    @include size(14px, 14px);
+    display: inline-block;
+    text-align: center;
+
+    &:hover::before {
+      animation: transform 0.2s linear 0s 1 normal;
+      animation-fill-mode: forwards;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+      background-color: #3a30f8;
+      @include size(8px, 8px);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.content__title {
+  font-family: "Rubik Mono One", sans-serif;
+  letter-spacing: 6.4px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  @include text(#000000, rem(80), 400);
+  @include respond-to(phoneAndTablet) {
+    font-size: rem(32);
+  }
+
+  &--side {
+    transform: rotate(-90deg);
+    width: 50%;
+    font-family: "Rubik Mono One", sans-serif;
+    line-height: 1;
+    letter-spacing: 6.4px;
+    text-align: end;
+    position: absolute;
+    right: -19%;
+    top: 37%;
+    z-index: -999;
+    @include text(#f8f8f8, rem(175), 400);
+    @media screen and (min-width: 1025px) and (max-width: 1919px) {
+      font-size: 6.9375rem;
+      transform: rotate(0);
+      right: -10%;
+      top: -16%;
+      width: 60%;
+    }
+    @include respond-to(phoneAndTablet) {
+      font-size: 3.9375rem;
+      top: 0;
+      right: 0;
+      width: 39%;
+    }
+    @include respond-to(smallScreen) {
+      display: none;
+    }
+  }
+
+  & > span {
+    letter-spacing: -12px;
+    @include respond-to(phoneAndTablet) {
+      letter-spacing: 6.4px;
+    }
+  }
+}

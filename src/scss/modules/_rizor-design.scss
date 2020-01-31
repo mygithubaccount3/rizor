@@ -1,0 +1,62 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.content__rizor-design {
+  position: relative;
+  top: 8.4%;
+  left: 6%;
+  width: 17%;
+  @media screen and (min-width: 1025px) and (max-width: 1919px) {
+    width: 29%;
+  }
+
+  @include respond-to(phoneAndTablet) {
+    top: 0;
+    left: 0;
+    width: 47%;
+  }
+
+  @include respond-to(smallScreen) {
+    width: 100%;
+  }
+
+  & > h2 {
+    font-family: "Rubik Mono One", sans-serif;
+    letter-spacing: 3.2px;
+    margin-bottom: 23px;
+    @include text(#000000, rem(40), 400);
+    @include respond-to(phoneAndTablet) {
+      margin-top: 0;
+    }
+  }
+
+  & > p, & > ul > li {
+    font-family: Roboto, sans-serif;
+    line-height: 30px;
+    @include text(#000000, rem(18), 300);
+    @include respond-to(phoneAndTablet) {
+      line-height: 21px;
+    }
+  }
+
+  & > ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    & > li {
+      margin-bottom: 19px;
+      margin-left: 43px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: -42px;
+        background-color: black;
+        margin-right: 11px;
+        @include size(29px, 6px)
+      }
+    }
+  }
+}

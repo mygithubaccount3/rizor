@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <title>Rizor</title>
+</head>
+<body>
+
+
+<header class="header">
+    <img src="assets/img/logo.png" alt="Logo">
+    <nav>
+        <a id="resp-menu" class="responsive-menu" href="#"> Menu</a>
+        <ul class="menu">
+            <li><a href="#video1"> Преимущества</a></li>
+            <li><a href="#video1"> Характеристики</a></li>
+            <li><a href="#audience"> Для кого</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+
+
+<main class="content">
+    <ul class="content__nav">
+        
+            
+    <li><a href="#video" class="content__nav-item "></a></li>
+
+        
+            
+    <li><a href="#video1" class="content__nav-item "></a></li>
+
+        
+            
+    <li><a href="#video2" class="content__nav-item "></a></li>
+
+        
+            
+    <li><a href="#audience" class="content__nav-item "></a></li>
+
+        
+    </ul>
+    <div class="content__text-wrapper">
+        <h1 class="content__title">RIzor Hovertrax <span>4.0</span></h1>
+        <p class="content__description">Маневренность, легкость, экологичность</p>
+    </div>
+    <img src="assets/img/layer1.png" alt="layer 1">
+    
+    <figure class="content__video ">
+        <video id="video" controls preload="metadata">
+            <source src="assets/video/video1.mp4" type="video/mp4">
+        </video>
+        <div id="video-controls" class="controls" data-state="hidden">
+            <button id="playpause" type="button" data-state="play" class="controls__play "></button>
+            <span>Смотреть видео</span>
+        </div>
+    </figure>
+
+    <div class="content__advantages">
+        <img src="assets/img/layer1.png" alt="layer 1">
+        
+    <figure class="content__video content__video--left">
+        <video id="video1" controls preload="metadata">
+            <source src="assets/video/video1.mp4" type="video/mp4">
+        </video>
+        <div id="video-controls1" class="controls" data-state="hidden">
+            <button id="playpause1" type="button" data-state="play" class="controls__play controls__play--left"></button>
+            <span>Смотреть видео</span>
+        </div>
+    </figure>
+
+        <div class="content__rizor-design">
+            <h2>Дизайн</h2>
+            <p>Внешний вид скутера дышит идеями футуризма:</p>
+            <ul>
+                <li>плавные линии</li>
+                <li>подсветка светодиодными индикаторами</li>
+                <li>рельефные бамперы, оснащенные защитными панелями</li>
+            </ul>
+        </div>
+        <div class="content__rizor-colors">
+            <img src="assets/img/rizor.png" alt="Rizor" class="content__rizor">
+            <h2>Цвет</h2>
+            <p>Модель представлена сразу в нескольких цветах.</p>
+            <ul>
+                
+                    <li></li>
+                
+                    <li></li>
+                
+                    <li></li>
+                
+                    <li></li>
+                
+                    <li></li>
+                
+            </ul>
+        </div>
+        <div class="content__title content__title--side">4.0 RIzor</div>
+        <div class="content__rizor-modes">
+            <h2>Режимы</h2>
+            <p>Помимо «умной» подсветки, <span>Hovertrax 4.0</span> снабжён двумя скоростными режимами.</p>
+            <ul>
+                <li>Один для продвинутых пользователей</li>
+                <li>Второй для новичков</li>
+            </ul>
+            <ul>
+                <li>
+                    <h3><span>13</span> км/ч</h3>
+                    <p>Максимальная скорость</p>
+                </li>
+                <li>
+                    <h3><span>2</span></h3>
+                    <p>Скоростных режима</p>
+                </li>
+            </ul>
+        </div>
+        
+    <figure class="content__video content__video--mode">
+        <video id="video2" controls preload="metadata">
+            <source src="assets/video/video1.mp4" type="video/mp4">
+        </video>
+        <div id="video-controls2" class="controls" data-state="hidden">
+            <button id="playpause2" type="button" data-state="play" class="controls__play controls__play--mode"></button>
+            <span>Смотреть видео</span>
+        </div>
+    </figure>
+
+    </div>
+    <div class="content__audience" id="audience">
+        <img src="assets/img/layer1.png" alt="layer 1">
+        <div class="content__audience-wrapper">
+            <h1>Для кого</h1>
+            <p>При максимально выдерживаемой нагрузке в <span>100</span> кг отлично подойдёт, как для подрастающего поколения, так и для
+                более взрослых «наездников».</p>
+            <p>Это единственный гироскутер со специальным детским режимом езды.</p>
+            <a href="">Перейти в каталог</a>
+            <img src="assets/img/audience.png" alt="Audience">
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>© All rights reserved, 2017</p>
+</footer>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="assets/js/app.js"></script>
+
+
+</body>
+</html>

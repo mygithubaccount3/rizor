@@ -1,1 +1,1 @@
-gh-pages: https://mygithubaccount3.github.io/behavior-services/dist
+gh-pages: https://mygithubaccount3.github.io/rizor/dist

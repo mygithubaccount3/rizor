@@ -1,8 +1,16 @@
 @import "modules/header";
 @import "modules/content";
+@import "modules/nav";
+@import "modules/title";
+@import "modules/video";
+@import "modules/audience";
+@import "modules/player";
+@import "modules/rizor-modes";
+@import "modules/rizor-colors";
+@import "modules/rizor-design";
 @import "modules/footer";
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:700|Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700|Rubik+Mono+One&display=swap');
 
 * {
   box-sizing: border-box;

@@ -1,0 +1,77 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.content__video {
+  margin: 13px 0 0;
+  position: relative;
+  @include size(56%, max-content);
+  @include respond-to(tablet) {
+    padding-right: 15px;
+  }
+
+  @include respond-to(smallScreen) {
+    width: 100%;
+  }
+
+  &--left {
+    margin-top: 164px;
+    width: 45.4%;
+
+    @include respond-to(phoneAndTablet) {
+      margin-top: 0;
+    }
+
+    @include respond-to(smallScreen) {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  & span {
+    position: absolute;
+    top: 89px;
+    transform: rotate(-90deg);
+    left: -90px;
+    width: 75px;
+    letter-spacing: 0;
+
+    @include respond-to(phoneAndTablet) {
+      display: none;
+    }
+  }
+
+  &--mode {
+    left: 27%;
+    margin-top: 764px;
+    width: 65%;
+
+    @media screen and (min-width: 1025px) and (max-width: 1919px) {
+      left: 11%;
+      margin-top: 40px;
+      width: 60%;
+    }
+
+    @include respond-to(tablet) {
+      left: unset;
+      margin-top: 60px;
+      width: 75%;
+    }
+
+    @include respond-to(smallScreen) {
+      left: unset;
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    & span {
+      top: unset;
+      bottom: 73px;
+      left: -83px;
+      line-height: 0.9;
+    }
+  }
+
+  & > video {
+    @include size(100%, 100%)
+  }
+}

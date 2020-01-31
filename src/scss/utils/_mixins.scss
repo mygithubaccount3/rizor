@@ -7,7 +7,7 @@
   }
 
   @else if $media == tablet {
-    @media (min-device-width: $tabletPortrait) and (max-device-width: $tabletLandscape) { @content; }
+    @media (min-width: $tabletPortrait) and (max-width: $tabletLandscape) { @content; }
   }
 
   @else if $media == smallScreen {

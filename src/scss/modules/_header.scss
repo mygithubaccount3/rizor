@@ -6,7 +6,7 @@
   justify-content: space-between;
   margin: auto;
   padding-top: 30px;
-  width: 61%;
+  width: 62.3%;
 
   @include respond-to(phoneAndTablet) {
     align-items: center;
@@ -14,10 +14,19 @@
   }
 
   & > nav {
-    width: 435px;
+    width: 52%;
+
+    @include respond-to(tablet) {
+      min-width: 435px;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1919px) {
+      min-width: 435px;
+    }
   }
 
   & > img {
+    margin-left: 14px;
     @include size(156px, 39px);
 
     @include respond-to(phoneAndTablet) {
@@ -57,6 +66,10 @@
       line-height: 35px;
       letter-spacing: 1.12px;
       border-radius: 10px;
+
+      @include respond-to(smallScreen) {
+        border-radius: 0;
+      }
     }
   }
 }

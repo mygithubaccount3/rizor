@@ -1,0 +1,169 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.content__rizor-modes {
+  width: 25%;
+  position: relative;
+  left: 22.8%;
+  margin-top: 701px;
+
+  &::before {
+    content: "";
+    width: 39%;
+    height: 24vw;
+    display: block;
+    border: 1px solid black;
+    position: absolute;
+    left: 65%;
+    top: 60px;
+    border-left: none;
+    border-bottom: none;
+    z-index: -999;
+
+    @include respond-to(phoneAndTablet) {
+      display: none;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1919px) {
+      height: 15vw;
+    }
+  }
+
+  @media screen and (min-width: 1025px) and (max-width: 1919px) {
+    width: 40%;
+    left: 5%;
+    margin-top: 0;
+  }
+
+  @include respond-to(tablet) {
+    left: unset;
+    margin-top: 0;
+    width: 47%;
+  }
+
+  @include respond-to(smallScreen) {
+    width: 100%;
+    left: unset;
+    margin-top: 50px;
+  }
+
+  & > h2 {
+    font-family: "Rubik Mono One", sans-serif;
+    letter-spacing: 3.2px;
+    margin-bottom: 23px;
+    @include text(#000000, rem(40), 400);
+  }
+
+  & > p {
+    color: #000000;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+
+    & > span {
+      font-weight: 700;
+    }
+  }
+
+  & > ul:first-of-type {
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 0;
+
+    & > li {
+      font-family: Roboto, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 50px;
+      margin-left: 48px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: -42px;
+        background-color: black;
+        margin-right: 11px;
+        width: 29px;
+        height: 6px;
+      }
+    }
+  }
+
+  & > ul:last-of-type {
+    list-style-type: none;
+    padding-left: 0;
+
+    & > li {
+      display: inline-block;
+      width: 54%;
+      text-align: left;
+
+      @include respond-to(smallScreen) {
+        text-align: center;
+        width: 49%;
+      }
+
+      &:first-child {
+        margin-right: 38px;
+
+        @media screen and (min-width: 1025px) and (max-width: 1919px) {
+          margin-right: 0;
+        }
+
+        @include respond-to(phoneAndTablet) {
+          margin-right: 0;
+        }
+      }
+
+      &:last-child {
+        width: 35%;
+      }
+
+      & > h3 {
+        color: #3a30f8;
+        font-family: "Rubik Mono One", sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: -1.68px;
+        margin-bottom: 3px;
+        margin-top: 43px;
+
+        @include respond-to(smallScreen) {
+          font-size: 20px;
+          text-align: center;
+        }
+
+        & > span {
+          color: #3a30f8;
+          font-family: "Rubik Mono One", sans-serif;
+          font-size: 60px;
+          font-weight: 400;
+          letter-spacing: -4.2px;
+          margin-right: -12px;
+
+          @include respond-to(smallScreen) {
+            font-size: 40px;
+          }
+        }
+      }
+
+      & > p {
+        font-family: Roboto, sans-serif;
+        font-weight: 300;
+        line-height: 24px;
+        width: 115px;
+        margin-top: 0;
+        margin-left: 6px;
+
+        @include respond-to(smallScreen) {
+          margin: auto;
+        }
+      }
+    }
+  }
+}

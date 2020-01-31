@@ -1,0 +1,83 @@
+{% macro setLink(link, requiredClasses, optionalClass="") %}
+    <li><a href="{{ link }}" class="{{ requiredClasses }} {{ optionalClass }}"></a></li>
+{% endmacro %}
+{% macro figure(classContent="", classControls="", order="") %}
+    <figure class="content__video {{ classContent }}">
+        <video id="video{{ order }}" controls preload="metadata">
+            <source src="assets/video/video1.mp4" type="video/mp4">
+        </video>
+        <div id="video-controls{{ order }}" class="controls" data-state="hidden">
+            <button id="playpause{{ order }}" type="button" data-state="play" class="controls__play {{ classControls }}"></button>
+            <span>Смотреть видео</span>
+        </div>
+    </figure>
+{%  endmacro %}
+{% set anchors = ["#video", "#video1", "#video2", "#audience"] %}
+
+<main class="content">
+    <ul class="content__nav">
+        {% for i in range(0, 4) %}
+            {{ setLink(anchors[i], 'content__nav-item') }}
+        {% endfor %}
+    </ul>
+    <div class="content__text-wrapper">
+        <h1 class="content__title">RIzor Hovertrax <span>4.0</span></h1>
+        <p class="content__description">Маневренность, легкость, экологичность</p>
+    </div>
+    <img src="assets/img/layer1.png" alt="layer 1">
+    {{ figure() }}
+    <div class="content__advantages">
+        <img src="assets/img/layer1.png" alt="layer 1">
+        {{ figure("content__video--left", "controls__play--left", "1") }}
+        <div class="content__rizor-design">
+            <h2>Дизайн</h2>
+            <p>Внешний вид скутера дышит идеями футуризма:</p>
+            <ul>
+                <li>плавные линии</li>
+                <li>подсветка светодиодными индикаторами</li>
+                <li>рельефные бамперы, оснащенные защитными панелями</li>
+            </ul>
+        </div>
+        <div class="content__rizor-colors">
+            <img src="assets/img/rizor.png" alt="Rizor" class="content__rizor">
+            <h2>Цвет</h2>
+            <p>Модель представлена сразу в нескольких цветах.</p>
+            <ul>
+                {% for i in range(0, 5) %}
+                    <li></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="content__title content__title--side">4.0 RIzor</div>
+        <div class="content__rizor-modes">
+            <h2>Режимы</h2>
+            <p>Помимо «умной» подсветки, <span>Hovertrax 4.0</span> снабжён двумя скоростными режимами.</p>
+            <ul>
+                <li>Один для продвинутых пользователей</li>
+                <li>Второй для новичков</li>
+            </ul>
+            <ul>
+                <li>
+                    <h3><span>13</span> км/ч</h3>
+                    <p>Максимальная скорость</p>
+                </li>
+                <li>
+                    <h3><span>2</span></h3>
+                    <p>Скоростных режима</p>
+                </li>
+            </ul>
+        </div>
+        {{ figure("content__video--mode", "controls__play--mode", "2") }}
+    </div>
+    <div class="content__audience" id="audience">
+        <img src="assets/img/layer1.png" alt="layer 1">
+        <div class="content__audience-wrapper">
+            <h1>Для кого</h1>
+            <p>При максимально выдерживаемой нагрузке в <span>100</span> кг отлично подойдёт, как для подрастающего поколения, так и для
+                более взрослых «наездников».</p>
+            <p>Это единственный гироскутер со специальным детским режимом езды.</p>
+            <a href="">Перейти в каталог</a>
+            <img src="assets/img/audience.png" alt="Audience">
+        </div>
+    </div>
+</main>
