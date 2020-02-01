@@ -6,7 +6,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 217px;
-  padding-bottom: 215px;
+  padding-bottom: 35px;
   position: relative;
   width: 100%;
 
@@ -16,12 +16,106 @@
   }
 
   @include respond-to(tablet) {
-    padding-bottom: 80px;
-  }
-
-  @include respond-to(phoneAndTablet) {
     margin-top: 60px;
     padding-bottom: 50px;
+  }
+
+  @include respond-to(smallScreen) {
+    flex-direction: column;
+    margin-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  & > * {
+    width: 61.3%;
+  }
+
+  & > div:first-of-type {
+    margin-top: 80px;
+    width: 19.2%;
+
+    @media screen and (min-width: 1025px) and (max-width: 1919px) {
+      width: 31%;
+    }
+
+    @include respond-to(smallScreen) {
+      margin-top: 25px;
+      margin-bottom: 30px;
+      padding-right: 10px;
+      padding-left: 10px;
+      width: 100%;
+    }
+
+    @include respond-to(tablet) {
+      width: 34%;
+    }
+
+    & > h1 {
+      font-family: Roboto, sans-serif;
+      letter-spacing: 1.6px;
+      line-height: 30px;
+      margin-bottom: 74px;
+      text-transform: uppercase;
+      @include size(110px);
+      @include text(#ffffff, rem(20), 700);
+
+      @include respond-to(smallScreen) {
+        margin: auto;
+      }
+    }
+
+    & > p:first-of-type {
+      font-family: Roboto, sans-serif;
+      line-height: 30px;
+      @include size(330px);
+      @include text(#ffffff, rem(18), 300);
+
+      @include respond-to(phoneAndTablet) {
+        width: 100%;
+      }
+
+      & > span {
+        font-weight: 700;
+      }
+    }
+
+    & > p:last-of-type {
+      font-family: Roboto, sans-serif;
+      line-height: 30px;
+      margin-bottom: 95px;
+      @include size(276px);
+      @include text(#ffffff, rem(18), 300);
+
+      @include respond-to(smallScreen) {
+        margin-bottom: 20px;
+        @include size(100%);
+      }
+
+      @include respond-to(tablet) {
+        margin-bottom: 40px;
+        @include size(100%);
+      }
+    }
+
+    & > a {
+      font-family: Roboto, sans-serif;
+      line-height: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1.28px;
+      box-shadow: 0 5px 5px rgba(0, 0, 1, 0.2);
+      background-color: #ffffff;
+      display: block;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 25px;
+      @include size(270px, 50px);
+      @include text(#3a30f8, rem(16), 700);
+
+      @include respond-to(tablet) {
+        @include size(100%);
+      }
+    }
   }
 
   & > img {
@@ -31,153 +125,97 @@
     height: auto;
     max-width: 511px;
     opacity: 0.1;
+    @include size(24%);
+
+    @include respond-to(smallScreen) {
+      display: none;
+    }
   }
 
   &-wrapper {
-    margin-top: 80px;
     position: relative;
-    width: 80.4%;
-
-    &::after {
-      opacity: 0.5;
-      color: #ffffff;
-      font-family: "Rubik Mono One", sans-serif;
-      font-size: 186px;
-      font-weight: 400;
-      line-height: 182.84px;
-      text-align: end;
-      right: 20px;
-      position: absolute;
-      bottom: 0;
-      content: "4.0 Rizor";
-      display: block;
-      width: 813px;
-      height: 294px;
-      letter-spacing: 6.4px;
-
-      @include respond-to(phoneAndTablet) {
-        display: none;
-      }
-    }
+    top: -60px;
+    overflow: hidden;
+    @include size(61.25%, 39.063vw);
 
     @media screen and (min-width: 1025px) and (max-width: 1919px) {
-      max-height: 545px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      width: 92.4%;
+      height: 38.576vw;
     }
 
     @include respond-to(tablet) {
-      margin-top: 120px;
-      width: 93.4%;
+      top: 0;
+      height: auto;
     }
 
-    @include respond-to(phoneAndTablet) {
-      padding-right: 15px;
-      padding-left: 15px;
-      width: 100%;
-
-      margin-top: 25px;
-      max-height: 540px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+    @include respond-to(smallScreen) {
+      position: relative;
+      top: 0;
+      overflow: hidden;
+      padding-left: 10px;
+      padding-right: 10px;
+      @include size(100%)
     }
 
     & > img {
-      position: absolute;
-      top: -27.7%;
-      left: 23.7%;
       max-width: 1176px;
-      @include size(75.3%, auto);
-
-      @media screen and (min-width: 1025px) and (max-width: 1919px) {
-        position: static;
-        width: 56.3%;
-      }
-
-      @include respond-to(tablet) {
-        top: -46.7%;
-        left: 25.7%;
-        width: 64.3%;
-      }
-
-      @include respond-to(phoneAndTablet) {
-        position: static;
-        width: 50%;
-        margin-top: 108px;
-      }
-    }
-
-    & > h1 {
-      color: #ffffff;
-      font-family: Roboto, sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 1.6px;
-      line-height: 30px;
-      text-transform: uppercase;
-
-      width: 110px;
-      margin-bottom: 75px;
-
-      @include respond-to(phoneAndTablet) {
-        margin-bottom: 15px;
-      }
+      @include size(100%)
     }
 
     & > p {
-      color: #ffffff;
-      font-family: Roboto, sans-serif;
-      font-size: 18px;
-      font-weight: 300;
-      letter-spacing: 1.6px;
-      line-height: 30px;
-      width: 23%;
+      margin-top: 0;
+      margin-bottom: 0;
+      position: absolute;
+      bottom: -54px;
+      text-align: right;
+      right: 31.7%;
+      opacity: 0.5;
+      font-family: "Rubik Mono One", sans-serif;
+      line-height: 182.84px;
+      letter-spacing: 15px;
+      @include size(71%);
+      @include text(#ffffff, rem(185), 400);
 
-      & > span {
-        font-weight: bold;
+      @include respond-to(tablet) {
+        bottom: 0;
+        font-size: rem(90);
+        line-height: 100px;
+        right: 0;
+        width: 100%;
       }
 
       @media screen and (min-width: 1025px) and (max-width: 1919px) {
-        width: 43%;
-      }
-
-      @include respond-to(phoneAndTablet) {
-        width: 50%;
-      }
-
-      &:last-of-type {
-        margin-bottom: 67px;
-      }
-    }
-
-    & > a {
-      width: 270px;
-      height: 50px;
-      box-shadow: 0 5px 5px rgba(0, 0, 1, 0.2);
-      background-color: #ffffff;
-      color: #3a30f8;
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 30px;
-      text-transform: uppercase;
-      letter-spacing: 1.28px;
-      display: block;
-      text-align: center;
-      border-radius: 25px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      z-index: 999;
-
-      @include respond-to(phoneAndTablet) {
-        width: 50%;
+        opacity: 0.5;
+        font-family: "Rubik Mono One", sans-serif;
+        line-height: 150px;
+        letter-spacing: 6.4px;
+        margin-top: 0;
+        margin-bottom: 0;
         position: absolute;
+        bottom: -45px;
+        @include text(#ffffff, rem(130), 400);
+      }
+
+      @include respond-to(smallScreen) {
         bottom: 0;
-        left: 25%;
-        right: 25%;
+        right: 30px;
+        font-size: rem(24);
+        line-height: 36px;
+      }
+
+      & > span {
+        display: block;
+        letter-spacing: -46px;
+        width: 96%;
+
+        @media screen and (min-width: 1025px) and (max-width: 1919px) {
+          letter-spacing: 0;
+          width: 100%;
+        }
+
+        @include respond-to(phoneAndTablet) {
+          letter-spacing: 15px;
+          width: 100%;
+        }
       }
     }
   }
