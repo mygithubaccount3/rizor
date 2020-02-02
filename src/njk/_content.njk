@@ -29,6 +29,11 @@
     <img src="assets/img/layer1.png" alt="layer 1">
     {{ figure() }}
     <div class="content__advantages">
+        <ul class="content__nav content__nav--advantages">
+            {% for i in range(0, 4) %}
+                {{ setLink(anchors[i], 'content__nav-item') }}
+            {% endfor %}
+        </ul>
         <img src="assets/img/layer1.png" alt="layer 1">
         {{ figure("content__video--left", "controls__play--left", "1") }}
         <div class="content__rizor-design">

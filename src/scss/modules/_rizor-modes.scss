@@ -84,11 +84,11 @@
       &::before {
         content: "";
         position: absolute;
-        top: 15px;
-        left: -42px;
+        top: 43%;
+        left: -43px;
         background-color: black;
         margin-right: 11px;
-        width: 29px;
+        width: 30px;
         height: 6px;
       }
     }
@@ -109,7 +109,7 @@
       }
 
       &:first-child {
-        margin-right: 38px;
+        margin-right: 17px;
 
         @media screen and (min-width: 1025px) and (max-width: 1919px) {
           margin-right: 0;

@@ -41,21 +41,21 @@
 
   & > ul {
     list-style-type: none;
+    margin-top: 20px;
     padding-left: 0;
 
     & > li {
       margin-bottom: 19px;
-      margin-left: 43px;
+      margin-left: 45px;
       position: relative;
 
       &::before {
         content: "";
         position: absolute;
-        top: 15px;
-        left: -42px;
+        top: 13px;
+        left: -44px;
         background-color: black;
-        margin-right: 11px;
-        @include size(29px, 6px)
+        @include size(30px, 6px)
       }
     }
   }

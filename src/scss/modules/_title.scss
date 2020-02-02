@@ -12,6 +12,11 @@
     font-size: rem(32);
   }
 
+  & > span {
+    letter-spacing: -12px;
+    line-height: 1.2;
+  }
+
   &--side {
     transform: rotate(-90deg);
     width: 45.6%;
@@ -25,6 +30,20 @@
     z-index: -999;
     @include text(#f8f8f8, rem(175), 400);
 
+    & > span {
+      display: block;
+      letter-spacing: -45px;
+      line-height: 0.95;
+
+      @include respond-to(phoneAndTablet) {
+        letter-spacing: 6.4px;
+      }
+
+      @media screen and (min-width: 1025px) and (max-width: 1919px) {
+        letter-spacing: -20px;
+      }
+    }
+
     @media screen and (min-width: 1025px) and (max-width: 1919px) {
       font-size: 6.9375rem;
       transform: rotate(0);
@@ -35,20 +54,6 @@
 
     @include respond-to(phoneAndTablet) {
       display: none;
-    }
-  }
-
-  & > span {
-    display: block;
-    letter-spacing: -45px;
-    line-height: 0.95;
-
-    @include respond-to(phoneAndTablet) {
-      letter-spacing: 6.4px;
-    }
-
-    @media screen and (min-width: 1025px) and (max-width: 1919px) {
-      letter-spacing: -20px;
     }
   }
 }

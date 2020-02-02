@@ -4,10 +4,10 @@
 .content__nav {
   list-style-type: none;
   position: absolute;
-  right: 90px;
+  right: 4.9%;
   z-index: 99;
   @include respond-to(tablet) {
-    right: 30px;
+    right: 4%;
   }
 
   @include respond-to(smallScreen) {
@@ -20,7 +20,10 @@
     position: relative;
     left: 8px;
     background-color: #3a30f8;
-    @include size(2px, 15vw);
+    @include size(2px, 17vw);
+    @include respond-to(tablet) {
+      height: 10vw;
+    }
   }
 
   &::before {
@@ -29,6 +32,27 @@
 
   &::after {
     top: 17px;
+  }
+
+  &--advantages {
+    right: -11.35%;
+    @media screen and (min-width: 1025px) and (max-width: 1919px) {
+      right: -13%;
+    }
+    @include respond-to(tablet) {
+      right: 4%;
+    }
+    @include respond-to(smallScreen) {
+      display: none;
+    }
+
+    &::before {
+      bottom: 29px;
+    }
+
+    &::after {
+      top: 29px;
+    }
   }
 
   &-item {
