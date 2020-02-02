@@ -120,12 +120,11 @@
 
   & > img {
     position: absolute;
+    top: -2%;
     left: 0;
-    width: 24%;
-    height: auto;
     max-width: 511px;
     opacity: 0.1;
-    @include size(24%);
+    @include size(27%);
 
     @include respond-to(smallScreen) {
       display: none;
