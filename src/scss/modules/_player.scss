@@ -58,6 +58,27 @@
       opacity: 0.8;
       @include size(100px, 100px);
 
+      &[data-state="play"]::after {
+        content: '\f04b';
+        font-family: "Font Awesome\ 5 Free";
+        margin-left: 10px;
+        @include text(#3a30f8, rem(44), 900, 0 3px 7px rgba(0, 0, 1, 0.3))
+      }
+
+      &[data-state="pause"] {
+        opacity: 0.1;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &::after {
+          content: '\f04c';
+          font-family: "Font Awesome\ 5 Free";
+          @include text(#3a30f8, rem(41), 900, 0 3px 7px rgba(0, 0, 1, 0.3))
+        }
+      }
+
       & > img {
         transform: none;
         margin-left: 9px;
@@ -87,30 +108,6 @@
       content: '\f04c';
       font-family: "Font Awesome\ 5 Free";
       @include text(#3a30f8, rem(70), 900, 0 3px 7px rgba(0, 0, 1, 0.3))
-    }
-
-    &--left {
-      &[data-state="play"]::after {
-        content: '\f04b';
-        font-family: "Font Awesome\ 5 Free";
-        margin-left: 10px;
-        @include text(#3a30f8, rem(44), 900, 0 3px 7px rgba(0, 0, 1, 0.3))
-      }
-
-      &[data-state="pause"] {
-        opacity: 0.1;
-
-        &:hover {
-          opacity: 0.8;
-        }
-
-        &::after {
-          content: '\f04c';
-          font-family: "Font Awesome\ 5 Free";
-          margin-left: 10px;
-          @include text(#3a30f8, rem(41), 900, 0 3px 7px rgba(0, 0, 1, 0.3))
-        }
-      }
     }
   }
 }

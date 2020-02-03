@@ -18,13 +18,30 @@
     width: 47%;
   }
 
-  @include respond-to(tablet) {
-    border-right: 1px solid lightgray;
-  }
-
   @include respond-to(smallScreen) {
     top: 40px;
     width: 100%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 15vw;
+    background-color: black;
+    left: -20%;
+    top: 9%;
+
+    @include respond-to(tablet) {
+      height: 70vw;
+      left: unset;
+      top: 0;
+      right: 0;
+    }
+
+    @include respond-to(smallScreen) {
+      display: none;
+    }
   }
 
   & > h2 {
