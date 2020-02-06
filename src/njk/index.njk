@@ -4,12 +4,29 @@
 
 {% include "./_header.njk" %}
 {% include "./_content.njk" %}
-{% include "./_footer.njk" %}
 
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
 <script src="assets/js/app.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.content__rizor').slick({
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            arrows: false,
+            dots: true,
+            dotsClass: 'slick-dot',
+            initialSlide: 4,
+            customPaging: function(slider, i) {
+                return $('<button type="button" />').text("");
+            }
+    });
+    });
+</script>
 
 {% endblock %}

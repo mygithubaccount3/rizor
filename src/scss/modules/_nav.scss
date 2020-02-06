@@ -36,8 +36,9 @@
 
   &--advantages {
     right: -11.35%;
+    padding: 0;
     @media screen and (min-width: 1025px) and (max-width: 1919px) {
-      right: -13%;
+      right: -14%;
     }
     @include respond-to(tablet) {
       right: 4%;

@@ -6,8 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <style>
+        .slick-dot > li.slick-active > button {
+          animation: move 1s linear 0s infinite alternate;
+        }
+        .slick-dot > li.slick-active > button::before {
+            content: " ";
+            width: 1px;
+            height: 45px;
+            display: block;
+            background-color: lightgrey;
+            position: absolute;
+            bottom: -55px;
+            left: 9px;
+        }
+    </style>
     <title>Rizor</title>
 </head>
 <body>

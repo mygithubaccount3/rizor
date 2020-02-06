@@ -149,17 +149,27 @@
     left: -42%;
     @include size(152%, auto);
     @media screen and (min-width: 1025px) and (max-width: 1919px) {
+      top: 60%;
       left: 0;
       width: 90%;
     }
     @include respond-to(tablet) {
       top: 270px;
       left: 0;
-      width: 82%;
+      width: 70%;
     }
 
     @include respond-to(smallScreen) {
-      width: 35%;
+      width: 60%;
+      margin: auto;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    & > img {
+      @include size(100%);
+      max-width: 374px;
     }
   }
 

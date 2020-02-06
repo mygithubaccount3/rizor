@@ -6,31 +6,49 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 217px;
-  padding-bottom: 38px;
+  padding-bottom: 68px;
   position: relative;
   width: 100%;
 
   @media screen and (min-width: 1025px) and (max-width: 1919px) {
     margin-top: 130px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
   }
 
   @include respond-to(tablet) {
     margin-top: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
 
   @include respond-to(smallScreen) {
     flex-direction: column;
     margin-top: 30px;
-    padding-bottom: 25px;
-  }
-
-  & > * {
-    width: 61.3%;
+    padding-bottom: 55px;
   }
 
   & > div:first-of-type {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 999;
+    width: 27%;
+
+    & > img {
+      position: relative;
+      top: -15px;
+      max-width: 511px;
+      opacity: 0.1;
+      @include size(100%);
+
+      @include respond-to(smallScreen) {
+        display: none;
+      }
+    }
+  }
+
+  & > div:nth-of-type(2) {
     margin-top: 80px;
     width: 19.2%;
 
@@ -115,19 +133,6 @@
       @include respond-to(tablet) {
         @include size(100%);
       }
-    }
-  }
-
-  & > img {
-    position: absolute;
-    top: -2%;
-    left: 0;
-    max-width: 511px;
-    opacity: 0.1;
-    @include size(27%);
-
-    @include respond-to(smallScreen) {
-      display: none;
     }
   }
 

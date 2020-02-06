@@ -6,6 +6,7 @@
   top: 22%;
   left: 15.2%;
   width: 15%;
+  z-index: 999;
   @media screen and (min-width: 1025px) and (max-width: 1919px) {
     top: 8.4%;
     width: 23%;
@@ -33,7 +34,7 @@
     top: 9%;
 
     @include respond-to(tablet) {
-      height: 70vw;
+      height: 52vw;
       left: unset;
       top: 0;
       right: 0;
@@ -63,50 +64,58 @@
     margin-bottom: -1px;
     @include text(#000000, rem(18), 300);
   }
+}
 
-  & > ul {
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 54px;
-    width: 94%;
-    margin-left: 21px;
-    @media screen and (min-width: 1025px) and (max-width: 1919px) {
-      margin-top: 10px;
-      margin-left: 0;
-      width: 94%;
-    }
-    @include respond-to(phoneAndTablet) {
-      margin-left: 0;
-    }
+.slick-dot {
+  position: absolute;
+  top: -70px;
+  left: 33%;
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 63%;
+  z-index: 999;
 
-    & > li {
+  @include respond-to(smallScreen) {
+    top: -60px;
+    left: 0;
+    width: 100%;
+  }
+
+  @include respond-to(phoneAndTablet) {
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: 1025px) and (max-width: 1919px) {
+    left: 0;
+    width: 109%;
+  }
+
+  & > li {
+    & > button {
       display: inline-block;
-      border: 3px solid #ffffff;
+      border: none;
       border-radius: 50%;
       background-color: #e2e837;
-      @include size(26px, 26px);
+      width: 23px;
+      height: 23px;
+    }
 
-      &:hover {
-        animation: move 1s linear 0s infinite alternate;
-      }
+    &:nth-child(2) > button {
+      background-color: #00b6f1;
+    }
 
-      &:nth-child(2) {
-        background-color: #00b6f1;
-      }
+    &:nth-child(3) > button {
+      background-color: #e23232;
+    }
 
-      &:nth-child(3) {
-        background-color: #e23232;
-      }
+    &:nth-child(4) > button {
+      background-color: #f0efef;
+    }
 
-      &:nth-child(4) {
-        background-color: #f0efef;
-      }
-
-      &:nth-child(5) {
-        background-color: #0c0c0c;
-      }
+    &:nth-child(5) > button {
+      background-color: #0c0c0c;
     }
   }
 }

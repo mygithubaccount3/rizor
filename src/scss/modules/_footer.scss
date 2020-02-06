@@ -3,11 +3,14 @@
 
 .footer {
   background-color: #292929;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
   & > p {
     margin: 0;
     font-family: Roboto, sans-serif;
-    line-height: 30px;
+    line-height: 28px;
     text-align: center;
     @include text(#605f5f, rem(12), 300);
   }

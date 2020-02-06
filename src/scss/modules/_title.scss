@@ -15,6 +15,10 @@
   & > span {
     letter-spacing: -12px;
     line-height: 1.2;
+
+    @include respond-to(phoneAndTablet) {
+      letter-spacing: 0;
+    }
   }
 
   &--side {

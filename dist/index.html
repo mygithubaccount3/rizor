@@ -6,8 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <style>
+        .slick-dot > li.slick-active > button {
+          animation: move 1s linear 0s infinite alternate;
+        }
+        .slick-dot > li.slick-active > button::before {
+            content: " ";
+            width: 1px;
+            height: 45px;
+            display: block;
+            background-color: lightgrey;
+            position: absolute;
+            bottom: -55px;
+            left: 9px;
+        }
+    </style>
     <title>Rizor</title>
 </head>
 <body>
@@ -109,22 +125,21 @@
             </ul>
         </div>
         <div class="content__rizor-colors">
-            <img src="assets/img/rizor.png" alt="Rizor" class="content__rizor">
+            <div class="content__rizor">
+                
+                    <img src="assets/img/rizor.png" alt="Rizor">
+                
+                    <img src="assets/img/rizor.png" alt="Rizor">
+                
+                    <img src="assets/img/rizor.png" alt="Rizor">
+                
+                    <img src="assets/img/rizor.png" alt="Rizor">
+                
+                    <img src="assets/img/rizor.png" alt="Rizor">
+                
+            </div>
             <h2>Цвет</h2>
             <p>Модель представлена сразу в нескольких цветах.</p>
-            <ul>
-                
-                    <li></li>
-                
-                    <li></li>
-                
-                    <li></li>
-                
-                    <li></li>
-                
-                    <li></li>
-                
-            </ul>
         </div>
         <div class="content__title content__title--side"><span>4.0</span>RIzor</div>
         <div class="content__rizor-modes">
@@ -160,8 +175,9 @@
 
     </div>
     <div class="content__audience" id="audience">
-        <img src="assets/img/layer1.png" alt="layer 1">
-
+        <div>
+            <img src="assets/img/layer1.png" alt="layer 1">
+        </div>
         <div>
             <h1>Для кого</h1>
             <p>При максимально выдерживаемой нагрузке в <span>100</span> кг отлично подойдёт, как для подрастающего поколения, так и для
@@ -173,12 +189,11 @@
             <img src="assets/img/audience.png" alt="Audience">
             <p><span>4.0</span>Rizor</p>
         </div>
+        <div class="footer">
+            <p>© All rights reserved, 2017</p>
+        </div>
     </div>
 </main>
-
-<footer class="footer">
-    <p>© All rights reserved, 2017</p>
-</footer>
 
 
 <script
@@ -186,6 +201,24 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
 <script src="assets/js/app.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.content__rizor').slick({
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            arrows: false,
+            dots: true,
+            dotsClass: 'slick-dot',
+            initialSlide: 4,
+            customPaging: function(slider, i) {
+                return $('<button type="button" />').text("");
+            }
+    });
+    });
+</script>
 
 
 </body>
